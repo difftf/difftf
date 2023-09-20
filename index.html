@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Large-Vocabulary 3D Diffusion Model with Transformer.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Large-Vocabulary 3D Diffusion Model with Transformer</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+
+  </div>
+</nav>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Large-Vocabulary 3D Diffusion Model with Transformer</h1>
+          <div class="is-size-5 publication-authors">
+            Anonymous authors
+          </div>
+
+          <div class="is-size-5 publication-authors">
+
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+
+              
+             
+              
+
+                  
+                 
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve" >
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline >
+            <source src="./static/videos/1_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline>
+            <source src="./static/videos/2_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline >
+            <source src="./static/videos/3_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>        
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline >
+            <source src="./static/videos/4_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline >
+            <source src="./static/videos/5_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline >
+            <source src="./static/videos/6_.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          
+          
+          <p>
+            Creating diverse and high-quality 3D assets with an automatic generative model is highly desirable. Despite extensive efforts on 3D generation, most existing works focus on the generation of a single category or a few categories. In this paper, we introduce a diffusion-based feed-forward framework for synthesizing massive categories of real-world 3D objects with a single generative model. Notably, there are three major challenges for this large-vocabulary 3D generation: a) the need for expressive yet efficient 3D representation; b) large diversity in geometry and texture across categories; c) complexity in the appearances of real-world objects. To this end, we propose a novel triplane-based 3D-aware Diffusion model with TransFormer, DiffTF, for handling challenges via three aspects. 1) Considering efficiency and robustness, we adopt a revised triplane representation and improve the fitting speed and accuracy. 2) To handle the drastic variations in geometry and texture, we regard the features of all 3D objects as a combination of generalized 3D knowledge and specialized 3D features. To extract generalized 3D knowledge from diverse categories, we propose a novel 3D-aware transformer with shared cross-plane attention. It learns the cross-plane relations across different planes and aggregates the generalized 3D knowledge with specialized 3D features. 3) In addition, we devise the 3D-aware encoder/decoder to enhance the generalized 3D knowledge in the encoded triplanes for handling categories with complex appearances. Extensive experiments on ShapeNet and OmniObject3D (over 200 diverse real-world categories) convincingly demonstrate that a single DiffTF model achieves state-of-the-art large-vocabulary 3D object generation performance with large diversity, rich semantics, and high quality.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+<!-- ShapeNet. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        
+        <!--/ Car. -->
+
+
+
+
+    <!-- ShapeNet. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">ShapeNet</h2>
+
+        <!-- Car. -->
+        <h3 class="title is-4">Single-category: Car</h3>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video1_.mp4"
+                    type="video/mp4">
+          </video>
+
+
+
+
+        </div>
+        <!--/ Car. -->
+
+
+<!-- Plane. -->
+        <h3 class="title is-4">Single-category: Plane</h3>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <div class="content has-text-centered">
+                    <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video3_.mp4"
+                    type="video/mp4">
+          </video>
+
+
+
+
+
+
+
+
+        </div>
+        <!--/ Plane. -->
+
+
+
+<!-- Chair. -->
+        <h3 class="title is-4">Single-category: Chair</h3>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <div class="content has-text-centered">
+                              <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video2_.mp4"
+                    type="video/mp4">
+          </video>
+
+
+
+
+
+        </div>
+        <!--/ Chair. -->
+
+
+
+
+      </div>
+    </div>
+    <!--/ ShapeNet. -->
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+
+
+    <!-- ShapeNet. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">OmniObject3D</h2>
+
+        <!-- omni. -->
+        <h3 class="title is-4">Multi-category</h3>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        <div class="content has-text-centered">
+                             <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/video4_.mp4"
+                    type="video/mp4">
+          </video>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <!--/ omni. -->
+
+      </div>
+    </div>
+    <!--/ ShapeNet. -->
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+</body>
+</html>
